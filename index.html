@@ -1,1 +1,67 @@
-hello!
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="/css/extruder.css" rel="stylesheet" />
+    <script src="/js/extruder.js"></script>
+  </head>
+  <body>
+    <div style="text-align: center;">
+      <img src="/img/img01.PNG" alt="img01" width="400" />
+    </div>
+    <div class="table_div">
+      <table style="border: none;">
+        <tr>
+          <td>
+            <label>Filament Diameter</label>
+          </td>
+          <td>
+            <input type="number" id="fila_dia" value="1.75" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Line Width</label>
+          </td>
+          <td>
+            <input type="number" id="line_width" value="0.4" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Layer Height</label>
+          </td>
+          <td>
+            <input type="number" id="layer_height" value="0.25" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Printing Speed</label>
+          </td>
+          <td>
+            <input type="number" id="print_speed" value="60" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Volume Rate</label>
+          </td>
+          <td>
+            <label id="volume_rate">0</label>
+            <label>mm<sup>3</sup>/s</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Transfer Speed</label>
+          </td>
+          <td>
+            <label id="transfer_speed">0</label>
+            <label>mm/s</label>
+          </td>
+        </tr>
+      </table>
+      <button id="calculate_button">Calculate</button>
+    </div>
+  </body>
+</html>
