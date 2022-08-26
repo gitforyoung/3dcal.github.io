@@ -2,67 +2,132 @@
   <head>
     <meta charset="utf-8" />
     <link href="/css/extruder.css" rel="stylesheet" />
-    
+    <script src="/js/extruder.js"></script>
   </head>
   <body>
     <div style="text-align: center;">
       <img src="/img/img01.PNG" alt="img01" width="400" />
     </div>
-    <div class="table_div">
-      <table style="border: none;">
+    <div id="input_table">
+      <table>
         <tr>
           <td>
-            <label>Filament Diameter</label>
+            <label class="input_label">Filament Diameter</label>
           </td>
           <td>
-            <input type="number" id="fila_dia" value="1.75" required />
+            <input
+              class="input_box"
+              type="number"
+              id="fila_dia"
+              value="1.75"
+              required
+            />
+            <label class="input_unit">mm</label>
           </td>
         </tr>
         <tr>
           <td>
-            <label>Line Width</label>
+            <label class="input_label">Line Width</label>
           </td>
           <td>
-            <input type="number" id="line_width" value="0.4" required />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label>Layer Height</label>
-          </td>
-          <td>
-            <input type="number" id="layer_height" value="0.25" required />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label>Printing Speed</label>
-          </td>
-          <td>
-            <input type="number" id="print_speed" value="60" required />
+            <input
+              class="input_box"
+              type="number"
+              id="line_width"
+              value="0.4"
+              required
+            />
+            <label class="input_unit">mm</label>
           </td>
         </tr>
         <tr>
           <td>
-            <label>Volume Rate</label>
+            <label class="input_label">Layer Height</label>
           </td>
           <td>
-            <label id="volume_rate">0</label>
-            <label>mm<sup>3</sup>/s</label>
+            <input
+              class="input_box"
+              type="number"
+              id="layer_height"
+              value="0.25"
+              required
+            />
+            <label class="input_unit">mm</label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input
+              class="input_radio"
+              id="select1"
+              type="radio"
+              name="select"
+              value="select1"
+              checked
+            /><label class="input_radioLabel" for="select1">Print Speed</label>
+            <input
+              class="input_radio"
+              id="select2"
+              type="radio"
+              name="select"
+              value="select2"
+            /><label class="input_radioLabel" for="select2">Volume Rate</label>
+            <input
+              class="input_radio"
+              id="select3"
+              type="radio"
+              name="select"
+              value="select3"
+            /><label class="input_radioLabel" for="select3"
+              >Transfer Speed</label
+            >
           </td>
         </tr>
         <tr>
           <td>
-            <label>Transfer Speed</label>
+            <label class="input_label" id="selected_inputLabel"
+              >Printing Speed</label
+            >
           </td>
           <td>
-            <label id="transfer_speed">0</label>
-            <label>mm/s</label>
+            <input
+              class="input_box"
+              type="number"
+              id="selected_input"
+              value="60"
+              required
+            />
+            <label class="input_unit" id="selected_inputUnit">mm/s</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="input_label" id="selected_outputLabel1"
+              >Volume Rate</label
+            >
+          </td>
+          <td>
+            <label class="input_result" id="selected_output1">0</label>
+            <label class="input_unit" id="selected_outputUnit1"
+              >mm<sup>3</sup>/s</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="input_label" id="selected_outputLabel2"
+              >Transfer Speed</label
+            >
+          </td>
+          <td>
+            <label class="input_result" id="selected_output2">0</label>
+            <label class="input_unit" id="selected_outputUnit2">mm/s</label>
           </td>
         </tr>
       </table>
+    </div>
+    <div style="text-align: center;">
       <button id="calculate_button">Calculate</button>
     </div>
-    <script src="/js/extruder.js"></script>
   </body>
 </html>

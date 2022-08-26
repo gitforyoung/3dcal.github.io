@@ -1,9 +1,69 @@
-td {
+#input_table table {
+  border-collapse: collapse;
+}
+#input_table td {
   padding: 2px 10px 2px 10px;
+  border-bottom: 1px solid #444444;
 }
 
-.table_div {
+#input_table {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+}
+#input_table table {
+  border: none;
+}
+#input_table .input_label {
+  font-weight: bold;
+}
+#input_table .input_label.hidden {
+  display: none;
+}
+#input_table .input_box {
+  width: 80px;
+}
+#input_table .input_unit {
+  font-size: x-small;
+  font-weight: bold;
+}
+#input_table .input_unit.hidden {
+  display: none;
+}
+#input_table .input_result {
+  color: red;
+  font-weight: bold;
+}
+#input_table .input_radio {
+  display: none;
+}
+#input_table .input_radio + .input_radioLabel {
+  display: inline-block;
+  cursor: pointer;
+  width: 80px;
+  padding: 4px 3px 3px 4px;
+  border: 1px solid lightgrey;
+  text-align: center;
+  font-size: x-small;
+  background-color: #fff;
+  color: #333;
+}
+#input_table .input_radio:checked + .input_radioLabel {
+  background-color: royalblue;
+  color: #fff;
+}
+
+button {
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background: royalblue;
+  color: whitesmoke;
+  padding: 10px;
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+button:active {
+  box-shadow: none;
 }
