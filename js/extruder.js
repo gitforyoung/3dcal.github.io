@@ -1,4 +1,4 @@
-const calculate_button = document.querySelector("button");
+const calculate_button = document.getElementById("calculate_button");
 var selected_output1;
 var selected_output2;
 var selected;
